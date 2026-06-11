@@ -53,7 +53,7 @@ async function previewAndPrintReport(action, options, env) {
 
     // PDF viewers inside iframes don't reliably fire onload, so use a
     // short delay to let the viewer initialise before calling print().
-    setTimeout(doPrint, 800);
+    setTimeout(doPrint, 200);
 
     // Clean up the hidden iframe after a reasonable window.
     setTimeout(() => {
