@@ -1,23 +1,17 @@
-# -*- coding: utf-8 -*-
 {
-    'name': 'Open PDF Reports and PDF Attachments in Browser',
-    'version': '12.0.1.1',
-    'summary': """Open PDF Reports and PDF Attachments in Browser""",
-    'author': 'Ivan Sokolov',
+    'name': 'Open PDF Reports in Browser',
+    'version': '18.0.1.0.0',
+    'summary': 'Open PDF reports in browser instead of downloading them',
+    'author': 'Techsystech',
     'category': 'Productivity',
-    'license': 'GPL-3',
-    'website': 'https://demo.cetmix.com',
-    'live_test_url': 'https://demo.cetmix.com',
-    'description': """
-    Preview reports and pdf attachments in browser instead of downloading them.
-    Open Report or PDF Attachment in new tab instead of downloading.              
-""",
-    'depends': ['base', 'web'],
-    'images': ['static/description/banner.png'],
-    'data': [
-        'views/prt_report_preview_template.xml',
-    ],
+    'license': 'LGPL-3',
+    'depends': ['web'],
+    'assets': {
+        'web.assets_backend': [
+            'prt_report_attachment_preview/static/src/js/report_preview.js',
+        ],
+    },
     'installable': True,
-    'application': True,
-    'auto_install': False
+    'application': False,
+    'auto_install': False,
 }
